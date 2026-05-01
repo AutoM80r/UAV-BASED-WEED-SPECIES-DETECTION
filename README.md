@@ -1,75 +1,87 @@
-# 🌾 Project DRONEWEED: Precision Vision for a Greener Future 🛰️
-### *Revolutionizing Sustainable Agriculture through YOLOv8 Machine Vision*
+<div align="center">
 
-![Python](https://img.shields.io/badge/python-3670A0?style=for-the-badge&logo=python&logoColor=ffdd54)
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![YOLOv8](https://img.shields.io/badge/YOLOv8-00FFAA?style=for-the-badge)
-![MIT](https://img.shields.io/badge/Manipal_Institute_of_Technology-Mechatronics-orange?style=for-the-badge)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:0a1628,40:0d3d6e,100:00bcd4&height=200&section=header&text=DroneWeed&fontSize=52&fontColor=ffffff&animation=twinkling&fontAlignY=36&desc=UAV-Based%20Weed%20Species%20Detection%20%7C%20YOLOv8&descAlignY=56&descAlign=50&descSize=16" />
 
----
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=600&size=18&duration=2800&pause=1000&color=00BCD4&center=true&vCenter=true&width=700&lines=Real-time+weed+detection+from+UAV+imagery.;YOLOv8+%E2%80%94+0.95%2B+mAP+%7C+80%2B+FPS.;Reduces+herbicide+usage+by+40-60%25.;DRONEWEED+dataset+%E2%80%94+67%2C558+images." alt="Typing SVG" />
 
-## 🚀 The Vision: Why We Built This
-Weed infestation is a global crisis, causing up to **34% annual crop yield loss**. Traditional "blanket spraying" of herbicides is expensive, labor-intensive, and ecologically damaging. 
+<br/>
 
-Our team built a **Real-Time Weed Detection System** that acts as a surgical tool for the sky. By deploying UAV-mounted AI, we've developed a way to spot the "silent thieves" of the field—weeds—before they can steal nutrients from crops. This enables precision herbicide application that can reduce chemical usage by **40-60%** while protecting soil biodiversity.
+![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![YOLOv8](https://img.shields.io/badge/YOLOv8-00FFAA?style=for-the-badge&logoColor=black)
+![OpenCV](https://img.shields.io/badge/OpenCV-27338e?style=for-the-badge&logo=OpenCV&logoColor=white)
+![Jupyter](https://img.shields.io/badge/Jupyter-F37626?style=for-the-badge&logo=jupyter&logoColor=white)
+![MIT Manipal](https://img.shields.io/badge/MIT_Manipal-Mechatronics-orange?style=for-the-badge)
 
----
-
-## 🛠️ The Work: Engineering the Edge
-We didn't just train a model; we engineered a robust vision pipeline designed for the unpredictable world of outdoor farming.
-
-### 🧠 The YOLOv8 "Brain"
-We leveraged the latest evolution of the YOLO family, moving beyond traditional detection to a unified spatial regression approach.
-* **Anchor-Free Mechanism**: Our model predicts object centers directly, allowing it to adapt to the irregular growth patterns of weeds without manual anchor box tuning.
-* **Decoupled Heads**: By separating classification and localization tasks into separate pathways, we improved prediction accuracy significantly.
-* **Advanced Backbones**: Utilizing the **CSPDarknet53** backbone with **C2f modules**, we maximized feature extraction while reducing computational overhead.
-
-### 🌪️ Data "Training Camp" (Augmentation)
-To ensure our AI could survive harsh sunlight, deep shadows, and varying altitudes, we implemented a rigorous augmentation strategy:
-* **Mosaic Augmentation**: Stitches four training images together to force the model to recognize weeds at various scales and contexts.
-* **MixUp Blending**: Linear interpolation between samples that encourages the model to learn broader feature patterns rather than memorizing images.
-* **HSV Jittering**: Simulates varying sunlight and moisture conditions (brightness, saturation, hue) to maintain 24/7 field reliability.
+</div>
 
 ---
 
-## 📈 Breakthrough Performance
-Our results prove that computational efficiency doesn't have to come at the cost of accuracy.
+## The Problem
 
-| Metric | Achievement | Impact |
-| :--- | :--- | :--- |
-| **Detection Accuracy** | **0.95 - 0.96 mAP** | Near-perfect weed identification. |
-| **Real-Time Speed** | **>80 FPS** | Faster than the fastest agricultural drones. |
-| **Top-1 Accuracy** | **>99%** | Reliable differentiation in complex fields. |
-| **Resolution** | **640x640 px** | Captures weeds as small as 2cm. |
+Weed infestation causes up to **34% annual crop yield loss** globally. Traditional blanket spraying is expensive, labor-intensive, and ecologically destructive. This project builds a **surgical AI solution** — a UAV-mounted real-time detection system that targets only weeds, enabling precision herbicide application.
 
 ---
 
-## 🌿 Species Spotlight
-Our AI is a "botanist in a box," specifically trained on the **DRONEWEED dataset** (67,558 images) to distinguish between crops and these aggressive species:
-* **Maize & Tomato Crops**: The primary protected species.
-* **The Competitors**: *Atriplex patula*, *Chenopodium album*, *Convolvulus arvensis*.
-* **The Invaders**: *Cyperus rotundus*, *Portulaca oleracea*, *Solanum nigrum*.
+## Results
+
+<div align="center">
+
+| Metric | Achievement |
+|:---|:---|
+| **Detection Accuracy** | **0.95 – 0.96 mAP** |
+| **Real-Time Speed** | **> 80 FPS** |
+| **Top-1 Classification Accuracy** | **> 99%** |
+| **Input Resolution** | 640 × 640 px (detects weeds as small as 2 cm) |
+| **Herbicide Reduction (est.)** | **40 – 60%** via precision targeting |
+
+</div>
 
 ---
 
-## 🌍 Sustainability (SDG Goals)
-We are proud that this work advances the **United Nations Sustainable Development Goals**:
-* **SDG 2 (Zero Hunger)**: Protecting yields for a growing population through efficient weed management.
-* **SDG 12 (Responsible Production)**: Slashing chemical runoff through precision spraying.
-* **SDG 15 (Life on Land)**: Preserving soil biodiversity and ecosystem health by reducing chemical loads.
+## Model Architecture
+
+### YOLOv8 — Key Design Choices
+
+| Component | Detail |
+|:---|:---|
+| **Anchor-Free Detection** | Predicts object centers directly — adapts to irregular weed growth patterns |
+| **Decoupled Heads** | Separate classification & localization pathways for higher accuracy |
+| **Backbone** | CSPDarknet53 with C2f modules — maximum feature extraction, low overhead |
+
+### Data Augmentation Pipeline
+
+| Technique | Purpose |
+|:---|:---|
+| **Mosaic Augmentation** | Forces multi-scale weed recognition |
+| **MixUp Blending** | Prevents memorization, improves generalization |
+| **HSV Jittering** | Simulates varying sunlight, moisture, and altitude conditions |
 
 ---
 
-## ⚡ Quick Start
-To replicate our results or use our weights, ensure you have the `ultralytics` environment ready:
+## Dataset
 
-```bash
-# Clone the repository
-git clone [https://github.com/yourusername/drone-weed-detection.git](https://github.com/yourusername/drone-weed-detection.git)
-cd drone-weed-detection
+**DRONEWEED** — 67,558 UAV images across 8 classes:
 
-# Install dependencies
-pip install ultralytics
+- **Crops (protected):** Maize, Tomato
+- **Weeds (targets):** *Atriplex patula*, *Chenopodium album*, *Convolvulus arvensis*, *Cyperus rotundus*, *Portulaca oleracea*, *Solanum nigrum*
 
-# Run inference on your own drone footage
-yolo predict model=best_weights.pt source='path/to/your/video.mp4'
+---
+
+## Impact — UN SDG Alignment
+
+| Goal | Contribution |
+|:---|:---|
+| **SDG 2** Zero Hunger | Protects yields through early precision weed management |
+| **SDG 12** Responsible Production | Slashes chemical runoff via targeted spraying |
+| **SDG 15** Life on Land | Reduces chemical load, preserves soil biodiversity |
+
+---
+
+<div align="center">
+
+*Mechatronics Engineering — MIT Manipal '26*
+
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:00bcd4,60:0d3d6e,100:0a1628&height=100&section=footer" />
+
+</div>
