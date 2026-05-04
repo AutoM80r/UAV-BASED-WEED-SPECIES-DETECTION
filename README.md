@@ -74,7 +74,7 @@ Weed infestation causes up to **34% annual crop yield loss** globally. Tradition
 |:---|:---|
 | **SDG 2** Zero Hunger | Protects yields through early precision weed management |
 | **SDG 12** Responsible Production | Slashes chemical runoff via targeted spraying |
-| **SDG 15** Life on Land | Reduces chemical load, preserves soil biodiversity |
+| **SDG 15** Life on Land. | Reduces chemical load, preserves soil biodiversity |
 
 ---
 
